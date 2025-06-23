@@ -3,404 +3,977 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thangaraju Avinash - Portfolio</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <title>Thangaraju Avinash | Cybersecurity Specialist</title>
     <style>
-        /* General Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;500;600;700&display=swap');
+        
         :root {
-            --bg-color: #1a1a1a;
-            --text-color: #f4f4f9;
-            --primary-color: #00bfff;
-            --secondary-color: #6200ea;
-            --card-bg: #2a2a2a;
-            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --primary: #04ca9f;
+            --secondary: #056d63;
+            --accent: #3a7e7d;
+            --dark: #000000;
+            --darker: #050505;
+            --light: #adb4b4;
+            --medium: #5c9c96;
+            --warning: #ffff00;
+            --danger: #ff4444;
+            --success: #44ff44;
+            --glow-primary: 0 0 20px rgba(4, 202, 159, 0.8);
+            --glow-secondary: 0 0 20px rgba(5, 109, 99, 0.6);
+            --glow-accent: 0 0 20px rgba(58, 126, 125, 0.7);
         }
-
-        body {
-            font-family: 'Source Code Pro', monospace;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+        
+        * {
             margin: 0;
             padding: 0;
-            transition: background-color 0.5s, color 0.5s;
+            box-sizing: border-box;
         }
-
+        
+        body {
+            font-family: 'Source Code Pro', monospace;
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(4, 202, 159, 0.08) 0%, transparent 25%),
+                radial-gradient(circle at 90% 80%, rgba(5, 109, 99, 0.05) 0%, transparent 25%),
+                linear-gradient(135deg, rgba(4, 202, 159, 0.02) 0%, rgba(5, 109, 99, 0.02) 100%);
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(4, 202, 159, 0.03) 2px,
+                    rgba(4, 202, 159, 0.03) 4px
+                );
+            pointer-events: none;
+            z-index: -1;
+        }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 1;
         }
-
-        /* Header */
+        
+        /* Terminal Header */
         header {
-            text-align: center;
-            padding: 50px 0;
-            background-color: var(--secondary-color);
-            color: white;
-            border-radius: 0 0 20px 20px;
+            background: linear-gradient(135deg, var(--darker) 0%, #111 100%);
+            border: 2px solid var(--primary);
+            box-shadow: var(--glow-primary), inset 0 0 50px rgba(4, 202, 159, 0.1);
+            padding: 25px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
         }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary), var(--primary));
+            animation: pulse-border 3s infinite;
         }
-
-        header p {
-            font-size: 1.2rem;
-            margin: 10px 0 0;
+        
+        @keyframes pulse-border {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
-
-        .social-links a {
-            color: white;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Navbar */
-        nav {
+        
+        .terminal-bar {
             display: flex;
-            justify-content: center;
-            background-color: var(--card-bg);
-            padding: 10px 0;
-            border-radius: 10px;
+            align-items: center;
             margin-bottom: 20px;
-            box-shadow: var(--card-shadow);
+            background: rgba(0, 0, 0, 0.5);
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid var(--medium);
         }
-
-        nav a {
-            color: white;
+        
+        .terminal-btn {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            margin-right: 8px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .terminal-btn:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 10px currentColor;
+        }
+        
+        .btn-red {
+            background-color: #ff5f56;
+            box-shadow: 0 0 5px #ff5f56;
+        }
+        
+        .btn-yellow {
+            background-color: #ffbd2e;
+            box-shadow: 0 0 5px #ffbd2e;
+        }
+        
+        .btn-green {
+            background-color: #27c93f;
+            box-shadow: 0 0 5px #27c93f;
+        }
+        
+        .terminal-title {
+            flex-grow: 1;
+            text-align: center;
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 600;
+            text-shadow: 0 0 5px var(--primary);
+        }
+        
+        .system-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-shadow: var(--glow-primary);
+            margin-bottom: 15px;
+            text-align: center;
+            animation: glitch 3s infinite;
+        }
+        
+        @keyframes glitch {
+            0%, 100% { 
+                transform: translateX(0);
+                text-shadow: var(--glow-primary);
+            }
+            10% { 
+                transform: translateX(-2px);
+                text-shadow: -2px 0 var(--primary), 2px 0 var(--secondary);
+            }
+            20% { 
+                transform: translateX(2px);
+                text-shadow: 2px 0 var(--primary), -2px 0 var(--secondary);
+            }
+            30% { 
+                transform: translateX(-1px);
+                text-shadow: var(--glow-primary);
+            }
+        }
+        
+        .role-title {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: var(--glow-secondary);
+            animation: typewriter 4s steps(40) 1s both;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid var(--secondary);
+        }
+        
+        @keyframes typewriter {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+        
+        h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin: 30px 0 20px;
+            text-shadow: var(--glow-primary);
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        h2::before {
+            content: "▶";
+            position: absolute;
+            left: -35px;
+            color: var(--secondary);
+            animation: blink 1.5s infinite;
+        }
+        
+        h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            color: var(--accent);
+            margin: 20px 0 10px;
+            text-shadow: var(--glow-accent);
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 12px 15px;
+            border: 1px solid var(--secondary);
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(5, 109, 99, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .contact-item:hover::before {
+            left: 100%;
+        }
+        
+        .contact-item:hover {
+            border-color: var(--primary);
+            box-shadow: var(--glow-primary);
+            transform: translateY(-2px);
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .contact-item a {
+            color: var(--secondary);
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1rem;
-            transition: color 0.3s, transform 0.3s;
+            transition: color 0.3s ease;
         }
-
-        nav a:hover {
-            color: var(--primary-color);
-            transform: translateY(-3px);
+        
+        .contact-item a:hover {
+            color: var(--primary);
         }
-
+        
         /* Sections */
         section {
-            margin: 40px 0;
+            background: linear-gradient(135deg, rgba(5, 5, 5, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%);
+            border: 2px solid var(--medium);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), inset 0 0 50px rgba(4, 202, 159, 0.05);
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
         }
-
-        section h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
+        
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--primary), transparent);
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
         }
-
-        .card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-            margin-bottom: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-        }
-
-        .card h3 {
+        
+        section::after {
+            content: ">";
+            position: absolute;
+            top: 20px;
+            left: -40px;
+            color: var(--primary);
+            font-weight: bold;
             font-size: 1.5rem;
-            margin: 0 0 10px;
+            animation: blink 2s infinite;
         }
-
-        .card p {
-            margin: 0;
-            color: #ccc;
+        
+        /* Status Bar */
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--secondary);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 15px;
+            border: 1px solid var(--secondary);
+            border-radius: 4px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-
-        /* Skills Grid */
-        .skills-grid {
+        
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--success);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        
+        .hacker-text {
+            color: var(--secondary);
+            font-weight: 600;
+            text-shadow: var(--glow-secondary);
+        }
+        
+        /* Command Line */
+        .command-line {
+            background: var(--darker);
+            border: 2px solid var(--secondary);
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Source Code Pro', monospace;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--glow-secondary);
+        }
+        
+        .command-line::before {
+            content: "root@avinash:~$ ";
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .command-line .typing-effect {
+            color: var(--secondary);
+            border-right: 2px solid var(--secondary);
+            animation: blink 1s step-end infinite;
+        }
+        
+        /* Skills Section */
+        .skills-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
-
-        .skill-item {
-            background: var(--card-bg);
+        
+        .skill-category {
+            background: linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(5, 5, 5, 0.9) 100%);
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid var(--medium);
+            border-top: 4px solid var(--primary);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-
-        .skill-item:hover {
+        
+        .skill-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(4, 202, 159, 0.03), rgba(5, 109, 99, 0.03));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .skill-category:hover::before {
+            opacity: 1;
+        }
+        
+        .skill-category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 25px rgba(4, 202, 159, 0.3);
+            border-color: var(--primary);
         }
-
-        .skill-item i {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 10px;
+        
+        .skill-category h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-family: 'Orbitron', monospace;
+            text-shadow: var(--glow-primary);
         }
-
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            color: var(--light);
+            transition: all 0.3s ease;
+        }
+        
+        .skill-list li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-list li:hover {
+            color: var(--secondary);
+            transform: translateX(5px);
+        }
+        
+        .skill-list li:hover::before {
+            color: var(--primary);
+            transform: scale(1.2);
+        }
+        
         /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        
         .project-card {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--card-shadow);
-            margin-bottom: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: linear-gradient(135deg, rgba(17, 17, 17, 0.9) 0%, rgba(5, 5, 5, 0.9) 100%);
+            border: 2px solid var(--medium);
+            padding: 25px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
         }
-
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(4, 202, 159, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .project-card:hover::before {
+            left: 100%;
+        }
+        
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(4, 202, 159, 0.4);
+            border-color: var(--primary);
         }
-
+        
+        .project-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+            animation: slide 3s infinite;
+        }
+        
+        @keyframes slide {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+        
         .project-card h3 {
-            font-size: 1.5rem;
-            margin: 0 0 10px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-shadow: var(--glow-primary);
         }
-
+        
         .project-card p {
-            margin: 0;
-            color: #ccc;
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
-
+        
+        .tech-stack {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--secondary);
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-top: 10px;
+        }
+        
+        .tech-stack::before {
+            content: "$ tech_stack --list: ";
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Experience */
+        .experience {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--medium);
+            border-left: 4px solid var(--accent);
+            border-radius: 6px;
+            position: relative;
+        }
+        
+        .experience::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: var(--glow-primary);
+        }
+        
+        .job-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-family: 'Orbitron', monospace;
+            text-shadow: var(--glow-primary);
+        }
+        
+        .company {
+            color: var(--secondary);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .date {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        /* Certifications Grid */
+        .certs-achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .cert-item, .achievement-item {
+            background: linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(5, 5, 5, 0.8) 100%);
+            padding: 20px;
+            border: 2px solid var(--medium);
+            border-left: 4px solid var(--primary);
+            border-radius: 6px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .cert-item:hover, .achievement-item:hover {
+            transform: translateX(10px);
+            border-color: var(--primary);
+            box-shadow: var(--glow-primary);
+        }
+        
+        .cert-item h4, .achievement-item h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        /* Animations */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .blink {
+            animation: blink 1.5s infinite;
+        }
+        
         /* Footer */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: var(--secondary-color);
-            color: white;
-            border-radius: 20px 20px 0 0;
-            margin-top: 40px;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 2px solid var(--primary);
+            background: linear-gradient(135deg, var(--darker) 0%, #111 100%);
+            color: var(--light);
+            position: relative;
         }
-
-        /* Dark Mode Toggle */
-        .dark-mode-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--card-bg);
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.3s;
-        }
-
-        .dark-mode-toggle:hover {
-            transform: scale(1.1);
-        }
-
-        .dark-mode-toggle i {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        /* Gaming Cursor */
-        .custom-cursor {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: black;
-            border: 2px solid var(--primary-color);
-            border-radius: 50%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
-            animation: pulse 1.5s infinite ease-in-out;
-        }
-
-        @keyframes pulse {
-            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.7; }
-            100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
-        }
-
-        .custom-cursor::before {
+        
+        footer::before {
             content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(0, 191, 255, 0.5), transparent 70%);
-            animation: moveShadow 2s infinite linear;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary), var(--primary));
+            animation: pulse-border 2s infinite;
+        }
+        
+        .footer-hacker-text {
+            color: var(--secondary);
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .certs-achievements {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            
+            section::after {
+                display: none;
+            }
         }
 
-        @keyframes moveShadow {
-            0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-            100% { transform: translate(-50%, -50%) rotate(360deg) scale(1.5); }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .role-title {
+                font-size: 1rem;
+                white-space: normal;
+                border-right: none;
+                animation: none;
+            }
+
+            .terminal-title {
+                display: none;
+            }
+
+            .system-info {
+                flex-direction: column;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--darker);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+
+            header, section, footer {
+                border: 1px solid #ddd !important;
+                box-shadow: none !important;
+                background: white !important;
+            }
+
+            h1, h2, h3, h4 {
+                color: black !important;
+                text-shadow: none !important;
+            }
+
+            .contact-item a {
+                color: black !important;
+            }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Dark Mode Toggle -->
-    <div class="dark-mode-toggle" id="darkModeToggle">
-        <i class="bi bi-moon"></i>
-    </div>
-
-    <!-- Custom Cursor -->
-    <div class="custom-cursor"></div>
-
-    <header>
-        <h1>Thangaraju Avinash</h1>
-        <p>+918919860292 | avinashthangaraju8892@gmail.com | Bangalore, Karnataka, India</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/avinash7467/" target="_blank"><i class="bi bi-linkedin"></i></a>
-            <a href="mailto:avinashthangaraju8892@gmail.com"><i class="bi bi-envelope-fill"></i></a>
-        </div>
-    </header>
-
-    <nav>
-        <a href="#summary">Summary</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#achievements">Achievements</a>
-    </nav>
-
     <div class="container">
-        <!-- Summary Section -->
-        <section id="summary">
-            <h2>Summary</h2>
-            <div class="card">
-                <p>Proficient software developer with a strong focus on front-end technologies and expertise in Python, Java, and SQL. Recognized for exceptional leadership and effective project management. Committed to creating scalable, interactive solutions that deliver impact. Eager to apply my technical skills in a dynamic and innovative organization.</p>
+        <header>
+            <div class="terminal-bar">
+                <div class="terminal-btn btn-red"></div>
+                <div class="terminal-btn btn-yellow"></div>
+                <div class="terminal-btn btn-green"></div>
+                <div class="terminal-title">thangaraju_avinash.sh --login</div>
             </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="card">
-                <h3>Full Stack Development, Indian Institute of Digital Technology, Tirupati, India</h3>
-                <p><strong>Feb 2024 - May 2024</strong></p>
-                <p>Directed a team in project planning, execution, and quality control, reducing task completion time by 20%. Developed responsive, data-driven apps using React.js, Node.js, and MongoDB, increasing user engagement by 25%. Enhanced team coordination by implementing agile methodologies, minimizing project delays by 15%. Created documentation that accelerated onboarding for new hires by 30%.</p>
+            
+            <div class="system-info">
+                <span>System: Cybersecurity Specialist</span>
+                <span>Kernel: Offensive Security</span>
+                <span>Shell: Python/Bash</span>
+                <span>Terminal: Ethical Hacking</span>
             </div>
-            <div class="card">
-                <h3>Back-End Developer, iStop.ai, Bengaluru, India</h3>
-                <p><strong>May 2023 - Jul 2023</strong></p>
-                <p>Engineered scalable applications with PHP, MySQL, and JDBC, raising user satisfaction by 30%. Delivered technical solutions that reduced IT issue resolution time by 40%, achieving 99% system uptime. Optimized code and database queries, boosting system performance by 20% and cutting response times.</p>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <div class="card">
-                <h3>Venu Institute of Technology, India - Bachelor, Computer Science and Engineering</h3>
-                <p><strong>Dec 2020 - May 2024</strong></p>
-                <p>Achieved 82% with a focus on software development and cloud computing. Led a team project developing a web application, enhancing project management skills.</p>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="bi bi-code-slash"></i>
-                    <h3>Programming Languages</h3>
-                    <p>Java, Python</p>
+            
+            <h1>THANGARAJU AVINASH</h1>
+            <div class="role-title">Cybersecurity Specialist | Ethical Hacker | Penetration Tester</div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:avinashthangaraju8892@gmail.com">avinashthangaraju8892@gmail.com</a>
                 </div>
-                <div class="skill-item">
-                    <i class="bi bi-globe"></i>
-                    <h3>Web Development</h3>
-                    <p>HTML5, CSS3, JavaScript, Node.js</p>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+918919860292">+91 8919860292</a>
                 </div>
-                <div class="skill-item">
-                    <i class="bi bi-database"></i>
-                    <h3>Database Technologies</h3>
-                    <p>SQL, MongoDB</p>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bangalore, Karnataka, India</span>
                 </div>
-                <div class="skill-item">
-                    <i class="bi bi-cloud"></i>
-                    <h3>Cloud Platforms</h3>
-                    <p>AWS (S3), Azure (Web Apps)</p>
-                </div>
-                <div class="skill-item">
-                    <i class="bi bi-tools"></i>
-                    <h3>Development Tools</h3>
-                    <p>Git, GitHub, Eclipse, MS Office, IT-Support, Network Management</p>
-                </div>
-                <div class="skill-item">
-                    <i class="bi bi-people"></i>
-                    <h3>Soft Skills</h3>
-                    <p>Effective Communication, Teamwork, Remote Troubleshooting</p>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/avinash7467/" target="_blank">linkedin.com/in/avinash7467</a>
                 </div>
             </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
+        </header>
+        
+        <main>
+            <section id="about">
+                <h2>ABOUT_ME</h2>
+                <div class="command-line">
+                    <span class="typing-effect">whoami --detailed</span>
+                </div>
+                <p>Skilled cybersecurity professional with expertise in penetration testing, vulnerability assessment, and digital forensics. Experienced with security tools (Burp Suite, Nmap, Wireshark) and Python scripting for security automation.</p>
+                <p>Proven track record in identifying and mitigating security threats, conducting OSINT investigations, and ensuring compliance with security standards. Passionate about ethical hacking and protecting digital assets.</p>
+            </section>
+            
+            <section id="skills">
+                <h2>SKILLS_&_EXPERTISE</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>Offensive Security</h4>
+                        <ul class="skill-list">
+                            <li>Penetration Testing</li>
+                            <li>Vulnerability Assessment</li>
+                            <li>APK Analysis & Reverse Engineering</li>
+                            <li>OSINT Techniques</li>
+                            <li>Network Security Analysis</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Security Tools</h4>
+                        <ul class="skill-list">
+                            <li>Burp Suite</li>
+                            <li>Nmap</li>
+                            <li>Wireshark</li>
+                            <li>Kali Linux</li>
+                            <li>Sherlock</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Programming & Scripting</h4>
+                        <ul class="skill-list">
+                            <li>Python (Security Automation)</li>
+                            <li>Bash Scripting</li>
+                            <li>SQL</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Other Skills</h4>
+                        <ul class="skill-list">
+                            <li>Digital Forensics</li>
+                            <li>Incident Response</li>
+                            <li>DMCA Compliance</li>
+                            <li>WHOIS Analysis</li>
+                            <li>Network Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="experience">
+                <h2>PROFESSIONAL_EXPERIENCE</h2>
+                
+                <div class="experience">
+                    <div class="job-title">Associate - Monitoring and Enforcement</div>
+                    <div class="company">Copyright Integrity International, Bangalore, India</div>
+                    <div class="date">[ Jan - 2025 to Present ]</div>
+                    <ul>
+                        <li>Extracted and analyzed APK files with Kali Linux tools to identify and trace illegal streaming sources and metadata</li>
+                        <li>Decompiled APKs using OSINT techniques to extract metadata and trace illegal streaming sources</li>
+                        <li>Used Burp Suite, Nmap, Wireshark, and Sherlock for IP tracing, network analysis, and data extraction</li>
+                        <li>Drafted DMCA takedown notices, analyzed WHOIS records, and ensured compliance with IP enforcement standards</li>
+                    </ul>
+                </div>
+            </section>
+            
+    <section id="projects">
+        <h2>PROJECTS_&_RESEARCH</h2>
+        <div class="projects-grid">
             <div class="project-card">
                 <h3>Cyber-Attack Detection System</h3>
-                <p>Designed a Python-based system to identify real-time cyber threats with 93% accuracy, generating alerts within seconds. Designed an intuitive interface, increasing threat response speed by 40%. Enhanced detection capabilities with Python integrations, reducing false positives by 10%.</p>
+                <p>Designed a Python-based system to identify real-time cyber threats with machine learning algorithms. Implemented advanced threat detection patterns and automated alert mechanisms for rapid incident response.</p>
+                <div class="project-metrics">
+                    <span class="metric">93% Accuracy</span>
+                    <span class="metric">Real-time Detection</span>
+                    <span class="metric">10% Less False Positives</span>
+                    <span class="metric">40% Faster Response</span>
+                </div>
+                <div class="tech-stack">Python, Machine Learning, Threat Intelligence APIs, Real-time Processing</div>
             </div>
+            
             <div class="project-card">
-                <h3>AI Chatbot Application with Gemini API</h3>
-                <p>Built an interactive chat tool using Google Gemini API, handling over 500 daily interactions with a 95% satisfaction rate. Introduced a user-focused interface, increasing engagement by 20%. Added copy function to copy and analysis with different applications.</p>
+                <h3>Customer Feedback and Retention System</h3>
+                <p>Established a comprehensive feedback platform integrated with customer interaction tools and analytics dashboard. Developed automated data processing workflows to analyze user behavior patterns and improve service delivery.</p>
+                <div class="project-metrics">
+                    <span class="metric">15% Retention Increase</span>
+                    <span class="metric">25% Satisfaction Boost</span>
+                    <span class="metric">10% Better Engagement</span>
+                </div>
+                <div class="tech-stack">SQL, Data Analytics, Customer Support Integration, Dashboard UI</div>
             </div>
+            
             <div class="project-card">
-                <h3>Customer Feedback and Retention System (To-do List)</h3>
-                <p>Established a feedback platform linked with customer interaction tools, raising retention by 15% within three months. Analyzed user data to improve support services, boosting satisfaction scores by 25%. Leveraged SQL for actionable insights, enhancing engagement metrics by 10%.</p>
+                <h3>Advanced Chrome Screenshot Extension</h3>
+                <p>Built a sophisticated Chrome extension for capturing screenshots of all open tabs with advanced features including selective tab capture, automated URL-based filename generation, and batch processing capabilities.</p>
+                <div class="project-metrics">
+                    <span class="metric">Multi-tab Capture</span>
+                    <span class="metric">Automated Naming</span>
+                    <span class="metric">Enhanced Productivity</span>
+                </div>
+                <div class="tech-stack">JavaScript, Chrome APIs, Bootstrap, Google Material Icons, HTML5</div>
             </div>
-        </section>
-
-        <!-- Certifications Section -->
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <div class="card">
-                <h3>Python Programming, Code Tantra</h3>
-                <h3>Networking Basics, Udemy</h3>
-                <h3>Cybersecurity Essentials, Cisco</h3>
-            </div>
-        </section>
-
-        <!-- Achievements Section -->
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <div class="card">
-                <h3>Python Programming (Top Coder), Code Tantra Tech Solution</h3>
-                <h3>District Chess Player, APSWRIES Zone 4TH</h3>
-            </div>
-        </section>
+        </div>
+    </section>
+            
+            <section id="education">
+                <h2>EDUCATION</h2>
+                <div class="experience">
+                    <div class="job-title">Bachelor of Computer Science and Engineering</div>
+                    <div class="company">Venu Institute of Technology, India</div>
+                    <div class="date">GPA: 82.24</div>
+                    <p>Achieved 82% with a focus on software development and security concepts.</p>
+                </div>
+            </section>
+            
+            <section id="certifications">
+                <h2>CERTIFICATIONS_&_ACHIEVEMENTS</h2>
+                <div class="certs-achievements">
+                    <div class="cert-item">
+                        <h4>Python Programming</h4>
+                        <p>Code Tantra</p>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <h4>Networking Basics</h4>
+                        <p>Udemy</p>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <h4>Cybersecurity Essentials</h4>
+                        <p>Cisco</p>
+                    </div>
+                    
+                    <div class="achievement-item">
+                        <h4>Python Programming (Top Coder)</h4>
+                        <p>Code Tantra Tech Solution</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© <span id="current-year"></span> THANGARAJU AVINASH | CYBERSECURITY SPECIALIST</p>
+            <div class="footer-hacker-text">System secure: <span class="hacker-text">TRUE</span> | Firewall status: <span class="hacker-text">ACTIVE</span> | Last updated: <span id="current-date"></span></div>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Thangaraju Avinash. All rights reserved.</p>
-    </footer>
-
-    <!-- JavaScript -->
+    
     <script>
-        // Dark Mode Toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-
-        darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            darkModeToggle.innerHTML = body.classList.contains('dark-mode') ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon"></i>';
-        });
-
-        // Custom Cursor
-        const cursor = document.querySelector('.custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = `${e.pageX}px`;
-            cursor.style.top = `${e.pageY}px`;
-        });
+        // Set current date and year
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', options);
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Simple typing effect for command line
+        const commandText = "whoami --detailed";
+        const typingElement = document.querySelector('.typing-effect');
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < commandText.length) {
+                typingElement.textContent += commandText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 150);
+            }
+        }
+        
+        // Start typing effect after a delay
+        setTimeout(typeWriter, 1500);
     </script>
 </body>
 </html>
