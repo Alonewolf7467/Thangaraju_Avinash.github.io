@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thangaraju Avinash | Cybersecurity Specialist</title>
+    <title>Thangaraju Avinash | Brand Protection | Research Analyst | Information Security</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Source+Code+Pro:wght@300;400;500;600;700&display=swap');
         
@@ -69,7 +69,6 @@
             z-index: 1;
         }
         
-        /* Terminal Header */
         header {
             background: linear-gradient(135deg, var(--darker) 0%, #111 100%);
             border: 2px solid var(--primary);
@@ -122,20 +121,9 @@
             box-shadow: 0 0 10px currentColor;
         }
         
-        .btn-red {
-            background-color: #ff5f56;
-            box-shadow: 0 0 5px #ff5f56;
-        }
-        
-        .btn-yellow {
-            background-color: #ffbd2e;
-            box-shadow: 0 0 5px #ffbd2e;
-        }
-        
-        .btn-green {
-            background-color: #27c93f;
-            box-shadow: 0 0 5px #27c93f;
-        }
+        .btn-red { background-color: #ff5f56; box-shadow: 0 0 5px #ff5f56; }
+        .btn-yellow { background-color: #ffbd2e; box-shadow: 0 0 5px #ffbd2e; }
+        .btn-green { background-color: #27c93f; box-shadow: 0 0 5px #27c93f; }
         
         .terminal-title {
             flex-grow: 1;
@@ -168,22 +156,10 @@
         }
         
         @keyframes glitch {
-            0%, 100% { 
-                transform: translateX(0);
-                text-shadow: var(--glow-primary);
-            }
-            10% { 
-                transform: translateX(-2px);
-                text-shadow: -2px 0 var(--primary), 2px 0 var(--secondary);
-            }
-            20% { 
-                transform: translateX(2px);
-                text-shadow: 2px 0 var(--primary), -2px 0 var(--secondary);
-            }
-            30% { 
-                transform: translateX(-1px);
-                text-shadow: var(--glow-primary);
-            }
+            0%, 100% { transform: translateX(0); text-shadow: var(--glow-primary); }
+            10% { transform: translateX(-2px); text-shadow: -2px 0 var(--primary), 2px 0 var(--secondary); }
+            20% { transform: translateX(2px); text-shadow: 2px 0 var(--primary), -2px 0 var(--secondary); }
+            30% { transform: translateX(-1px); text-shadow: var(--glow-primary); }
         }
         
         .role-title {
@@ -193,7 +169,7 @@
             margin-bottom: 20px;
             font-weight: 600;
             text-shadow: var(--glow-secondary);
-            animation: typewriter 4s steps(40) 1s both;
+            animation: typewriter 4s steps(60) 1s both;
             overflow: hidden;
             white-space: nowrap;
             border-right: 2px solid var(--secondary);
@@ -231,7 +207,6 @@
             text-shadow: var(--glow-accent);
         }
         
-        /* Contact Info */
         .contact-info {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -262,9 +237,7 @@
             transition: left 0.5s ease;
         }
         
-        .contact-item:hover::before {
-            left: 100%;
-        }
+        .contact-item:hover::before { left: 100%; }
         
         .contact-item:hover {
             border-color: var(--primary);
@@ -284,11 +257,8 @@
             transition: color 0.3s ease;
         }
         
-        .contact-item a:hover {
-            color: var(--primary);
-        }
+        .contact-item a:hover { color: var(--primary); }
         
-        /* Sections */
         section {
             background: linear-gradient(135deg, rgba(5, 5, 5, 0.9) 0%, rgba(17, 17, 17, 0.7) 100%);
             border: 2px solid var(--medium);
@@ -323,7 +293,6 @@
             animation: blink 2s infinite;
         }
         
-        /* Status Bar */
         .status-bar {
             display: flex;
             justify-content: space-between;
@@ -338,11 +307,7 @@
             gap: 10px;
         }
         
-        .status-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
+        .status-item { display: flex; align-items: center; gap: 5px; }
         
         .status-indicator {
             width: 8px;
@@ -363,7 +328,6 @@
             text-shadow: var(--glow-secondary);
         }
         
-        /* Command Line */
         .command-line {
             background: var(--darker);
             border: 2px solid var(--secondary);
@@ -387,7 +351,6 @@
             animation: blink 1s step-end infinite;
         }
         
-        /* Skills Section */
         .skills-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -417,9 +380,7 @@
             transition: opacity 0.3s ease;
         }
         
-        .skill-category:hover::before {
-            opacity: 1;
-        }
+        .skill-category:hover::before { opacity: 1; }
         
         .skill-category:hover {
             transform: translateY(-5px);
@@ -435,9 +396,7 @@
             text-shadow: var(--glow-primary);
         }
         
-        .skill-list {
-            list-style-type: none;
-        }
+        .skill-list { list-style-type: none; }
         
         .skill-list li {
             margin-bottom: 8px;
@@ -466,7 +425,6 @@
             transform: scale(1.2);
         }
         
-        /* Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -494,9 +452,7 @@
             transition: left 0.6s ease;
         }
         
-        .project-card:hover::before {
-            left: 100%;
-        }
+        .project-card:hover::before { left: 100%; }
         
         .project-card:hover {
             transform: translateY(-8px) scale(1.02);
@@ -526,10 +482,7 @@
             text-shadow: var(--glow-primary);
         }
         
-        .project-card p {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
+        .project-card p { margin-bottom: 15px; line-height: 1.6; }
         
         .tech-stack {
             background: rgba(0, 0, 0, 0.7);
@@ -547,7 +500,6 @@
             font-weight: bold;
         }
         
-        /* Experience */
         .experience {
             margin-bottom: 30px;
             padding: 20px;
@@ -568,6 +520,27 @@
             background: var(--primary);
             border-radius: 50%;
             box-shadow: var(--glow-primary);
+        }
+        
+        .experience ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .experience ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .experience ul li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-size: 0.75rem;
+            top: 4px;
         }
         
         .job-title {
@@ -591,47 +564,47 @@
             font-style: italic;
         }
         
-        /* Certifications Grid */
-        .certs-achievements {
+        .certs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
         }
-        
-        .cert-item, .achievement-item {
+
+        .cert-item {
             background: linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(5, 5, 5, 0.8) 100%);
             padding: 20px;
             border: 2px solid var(--medium);
             border-left: 4px solid var(--primary);
             border-radius: 6px;
-            margin-bottom: 15px;
             transition: all 0.3s ease;
             position: relative;
         }
         
-        .cert-item:hover, .achievement-item:hover {
+        .cert-item:hover {
             transform: translateX(10px);
             border-color: var(--primary);
             box-shadow: var(--glow-primary);
         }
         
-        .cert-item h4, .achievement-item h4 {
+        .cert-item h4 {
             color: var(--primary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-family: 'Orbitron', monospace;
+            font-size: 0.9rem;
+        }
+
+        .cert-item p {
+            color: var(--secondary);
+            font-size: 0.85rem;
         }
         
-        /* Animations */
         @keyframes blink {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
         }
         
-        .blink {
-            animation: blink 1.5s infinite;
-        }
+        .blink { animation: blink 1.5s infinite; }
         
-        /* Footer */
         footer {
             text-align: center;
             padding: 30px 20px;
@@ -659,101 +632,34 @@
             margin-top: 10px;
         }
         
-        /* Responsive Design */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.5rem;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .certs-achievements {
-                grid-template-columns: 1fr;
-            }
-
-            section {
-                padding: 15px;
-            }
-
-            .contact-info {
-                grid-template-columns: 1fr;
-            }
-            
-            section::after {
-                display: none;
-            }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.5rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .skills-container { grid-template-columns: 1fr; }
+            .certs-grid { grid-template-columns: 1fr; }
+            section { padding: 15px; }
+            .contact-info { grid-template-columns: 1fr; }
+            section::after { display: none; }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            .role-title {
-                font-size: 1rem;
-                white-space: normal;
-                border-right: none;
-                animation: none;
-            }
-
-            .terminal-title {
-                display: none;
-            }
-
-            .system-info {
-                flex-direction: column;
-            }
+            h1 { font-size: 1.8rem; }
+            .role-title { font-size: 1rem; white-space: normal; border-right: none; animation: none; }
+            .terminal-title { display: none; }
+            .system-info { flex-direction: column; }
         }
 
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--darker); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-        ::-webkit-scrollbar-track {
-            background: var(--darker);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent);
-        }
-
-        /* Print Styles */
         @media print {
-            body {
-                background: white !important;
-                color: black !important;
-            }
-
-            header, section, footer {
-                border: 1px solid #ddd !important;
-                box-shadow: none !important;
-                background: white !important;
-            }
-
-            h1, h2, h3, h4 {
-                color: black !important;
-                text-shadow: none !important;
-            }
-
-            .contact-item a {
-                color: black !important;
-            }
+            body { background: white !important; color: black !important; }
+            header, section, footer { border: 1px solid #ddd !important; box-shadow: none !important; background: white !important; }
+            h1, h2, h3, h4 { color: black !important; text-shadow: none !important; }
+            .contact-item a { color: black !important; }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -769,23 +675,23 @@
             </div>
             
             <div class="system-info">
-                <span>System: Cybersecurity Specialist</span>
-                <span>Kernel: Offensive Security</span>
-                <span>Shell: Python/Bash</span>
-                <span>Terminal: Ethical Hacking</span>
+                <span>System: Brand Protection & Anti-Piracy</span>
+                <span>Kernel: Information Security</span>
+                <span>Shell: Research & OSINT</span>
+                <span>Terminal: DMCA / IP Enforcement</span>
             </div>
             
             <h1>THANGARAJU AVINASH</h1>
-            <div class="role-title">Cybersecurity Specialist | Ethical Hacker | Penetration Tester</div>
+            <div class="role-title">Brand Protection | Research Analyst | Information Security | Anti-Piracy | IP Enforcement | OSINT</div>
             
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:avinashthangaraju8892@gmail.com">avinashthangaraju8892@gmail.com</a>
+                    <a href="mailto:avinashthangaraju7467@gmail.com">avinashthangaraju7467@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <a href="tel:+918919860292">+91 8919860292</a>
+                    <a href="tel:+918919860292">+91 89198 60292</a>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -804,53 +710,58 @@
                 <div class="command-line">
                     <span class="typing-effect">whoami --detailed</span>
                 </div>
-                <p>Skilled cybersecurity professional with expertise in penetration testing, vulnerability assessment, and digital forensics. Experienced with security tools (Burp Suite, Nmap, Wireshark) and Python scripting for security automation.</p>
-                <p>Proven track record in identifying and mitigating security threats, conducting OSINT investigations, and ensuring compliance with security standards. Passionate about ethical hacking and protecting digital assets.</p>
+                <p>Brand Protection and Anti-Piracy Analyst with 1.5+ years of hands-on experience in IP enforcement, content protection, digital brand monitoring, and online marketplace enforcement. Currently managing end-to-end brand protection for 32+ health and pharma brands at Corsearch — covering websites, social media, and marketplaces — with direct client engagement and enforcement ownership.</p>
+                <p>Deep expertise in OSINT investigation, advanced Google search operators, reverse image search, domain intelligence, DMCA takedown workflows, APK reverse engineering, Wireshark packet analysis, Burp Suite traffic interception, and DNS/SSL/CDN forensics.</p>
             </section>
             
             <section id="skills">
                 <h2>SKILLS_&_EXPERTISE</h2>
                 <div class="skills-container">
                     <div class="skill-category">
-                        <h4>Offensive Security</h4>
+                        <h4>Brand & IP Protection</h4>
                         <ul class="skill-list">
-                            <li>Penetration Testing</li>
-                            <li>Vulnerability Assessment</li>
-                            <li>APK Analysis & Reverse Engineering</li>
-                            <li>OSINT Techniques</li>
-                            <li>Network Security Analysis</li>
+                            <li>Anti-Piracy Monitoring</li>
+                            <li>Brand Protection Enforcement</li>
+                            <li>Copyright Compliance</li>
+                            <li>IP Enforcement & DMCA Takedown</li>
+                            <li>Trademark Abuse Detection</li>
+                            <li>Counterfeit Investigation</li>
                         </ul>
                     </div>
                     
                     <div class="skill-category">
-                        <h4>Security Tools</h4>
+                        <h4>OSINT & Investigation</h4>
+                        <ul class="skill-list">
+                            <li>Advanced Google Search Operators</li>
+                            <li>Reverse Image Search</li>
+                            <li>WHOIS Intelligence</li>
+                            <li>DNS/IP Tracing & SSL Analysis</li>
+                            <li>CDN Mapping</li>
+                            <li>Digital Evidence Collection</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Technical Tools</h4>
                         <ul class="skill-list">
                             <li>Burp Suite</li>
-                            <li>Nmap</li>
                             <li>Wireshark</li>
-                            <li>Kali Linux</li>
-                            <li>Sherlock</li>
+                            <li>Nmap</li>
+                            <li>Kali Linux / CSI Linux</li>
+                            <li>APK Reverse Engineering</li>
+                            <li>Packet Capture & DRM Analysis</li>
                         </ul>
                     </div>
                     
                     <div class="skill-category">
-                        <h4>Programming & Scripting</h4>
+                        <h4>Platform & Reporting</h4>
                         <ul class="skill-list">
-                            <li>Python (Security Automation)</li>
-                            <li>Bash Scripting</li>
-                            <li>SQL</li>
-                            <li>HTML/CSS</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>Other Skills</h4>
-                        <ul class="skill-list">
-                            <li>Digital Forensics</li>
-                            <li>Incident Response</li>
-                            <li>DMCA Compliance</li>
-                            <li>WHOIS Analysis</li>
-                            <li>Network Management</li>
+                            <li>Marketplace Monitoring (Amazon, Flipkart, eBay, Meesho)</li>
+                            <li>Social Media Enforcement</li>
+                            <li>Dashboard & Case Management</li>
+                            <li>Python & SQL (Automation)</li>
+                            <li>Client Reporting & Legal Documentation</li>
+                            <li>IP Compliance Audits</li>
                         </ul>
                     </div>
                 </div>
@@ -860,106 +771,119 @@
                 <h2>PROFESSIONAL_EXPERIENCE</h2>
                 
                 <div class="experience">
-                    <div class="job-title">Associate - Monitoring and Enforcement</div>
-                    <div class="company">Copyright Integrity International, Bangalore, India</div>
-                    <div class="date">[ Jan - 2025 to Present ]</div>
+                    <div class="job-title">Brand Protection Analyst / Research Analyst</div>
+                    <div class="company">Corsearch | Mumbai, India</div>
+                    <div class="date">[ Jan 2026 – Present ]</div>
                     <ul>
-                        <li>Extracted and analyzed APK files with Kali Linux tools to identify and trace illegal streaming sources and metadata</li>
-                        <li>Decompiled APKs using OSINT techniques to extract metadata and trace illegal streaming sources</li>
-                        <li>Used Burp Suite, Nmap, Wireshark, and Sherlock for IP tracing, network analysis, and data extraction</li>
-                        <li>Drafted DMCA takedown notices, analyzed WHOIS records, and ensured compliance with IP enforcement standards</li>
+                        <li>Manage brand protection enforcement for 32+ active health and pharma brands across the full enforcement lifecycle — detection, evidence gathering, takedown execution, and client reporting.</li>
+                        <li>Monitor and enforce against unauthorized product listings, trademark abuse, and counterfeit sellers across Amazon, Flipkart, eBay, Meesho, Instagram, Facebook, Telegram, and YouTube.</li>
+                        <li>Deploy advanced Google search operators and reverse image search techniques to proactively discover new infringing websites, unauthorized distributors, and unlicensed sellers.</li>
+                        <li>Manage the Corsearch enforcement dashboard — tracking case status, enforcement actions, Pushback compliance, and reporting metrics across brands and client portfolios.</li>
+                        <li>Lead and present in client meetings with enforcement progress updates, escalation cases, and strategic recommendations; manage pushbacks with documented resolutions.</li>
+                        <li>Conduct domain-level investigations using WHOIS, DNS, SSL certificate analysis, and hosting intelligence to identify operators behind infringing sites.</li>
+                        <li>Submit, track, and escalate DMCA takedown notices and platform-specific removal requests across domains and platforms.</li>
+                        <li>Prepare enforcement reports, IP violation summaries, and case documentation for legal teams aligned with copyright laws and client compliance requirements.</li>
+                    </ul>
+                </div>
+
+                <div class="experience">
+                    <div class="job-title">Associate – Monitoring, Enforcement & Anti-Piracy</div>
+                    <div class="company">Copyright Integrity International (CII) | Bangalore, India</div>
+                    <div class="date">[ Jan 2025 – Dec 2025 ]</div>
+                    <ul>
+                        <li>Monitored piracy networks including live sports streams, OTT content re-distribution, IPTV portals, social media, and unauthorized mobile apps to support rapid enforcement actions.</li>
+                        <li>Performed APK reverse engineering with DRM-focused analysis to extract stream URLs, API endpoints, tokens, backend endpoints, and developer metadata for intelligence profiling.</li>
+                        <li>Conducted comprehensive website and domain OSINT: WHOIS lookup, DNS tracing, IP intelligence, CDN mapping, SSL certificate analysis, and hosting data extraction.</li>
+                        <li>Used Burp Suite for traffic analysis, authorization testing, and streaming link extraction; complemented by Wireshark packet capture for encrypted flow inspection.</li>
+                        <li>Built DMCA-ready evidence packs containing screenshots, timestamps, host details, packet capture logs, and forensic summaries to support legal takedown campaigns.</li>
+                        <li>Supported legal teams with enforcement reports, IP violation summaries, and coordinated takedown campaigns across websites, apps, and social media platforms.</li>
+                    </ul>
+                </div>
+            </section>
+    
+            <section id="projects">
+                <h2>PROJECTS_&_RESEARCH</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Anti-Piracy Enforcement Toolkit</h3>
+                        <p>Designed and built a Python-based piracy detection toolkit integrating OSINT modules, WHOIS lookup, domain/IP intelligence, DNS, SSL, and hosting analysis to automate detection of infringing content across websites, mobile apps, and social media platforms.</p>
+                        <p>Implemented APK scanning to extract streaming URLs, API endpoints, metadata, developer details, and distribution channels. Integrated Burp Suite proxy and CDN mapping modules; generated DMCA-ready evidence reports with screenshots, timestamps, logs, and IP violation summaries.</p>
+                        <div class="tech-stack">Python, OSINT Modules, Burp Suite, APK Analysis, WHOIS/DNS/SSL/CDN</div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Cyber-Attack Detection System</h3>
+                        <p>Developed a real-time threat detection engine using Python and anomaly-detection algorithms to perform traffic analysis and packet capture with Wireshark, enhancing detection of phishing, fraud investigation targets, and suspicious campaigns.</p>
+                        <p>Implemented log analysis and pattern-matching methods to identify suspicious behavior on online platforms. Integrated DRM-focused monitoring, digital rights management authorization checks, and protection of digital assets against bypass attempts.</p>
+                        <div class="tech-stack">Python, Wireshark, Anomaly Detection, DRM Monitoring, Packet Capture</div>
+                    </div>
+                </div>
+            </section>
+                
+            <section id="education">
+                <h2>EDUCATION</h2>
+                <div class="experience">
+                    <div class="job-title">B.Tech – Computer Science & Engineering</div>
+                    <div class="company">Vemu Institute of Technology, Chittoor, India</div>
+                    <div class="date">[ Jan 2021 – Jun 2024 ] | GPA: 82.24%</div>
+                    <ul>
+                        <li>Focus on cybersecurity, OSINT investigations, and cloud computing fundamentals.</li>
+                        <li>Led a web application development project demonstrating project management, problem-solving, and collaborative development skills.</li>
+                        <li>Completed multiple cybersecurity and OSINT-based projects building hands-on expertise in digital investigations, data analysis, and technical reporting.</li>
                     </ul>
                 </div>
             </section>
             
-    <section id="projects">
-        <h2>PROJECTS_&_RESEARCH</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Cyber-Attack Detection System</h3>
-                <p>Designed a Python-based system to identify real-time cyber threats with machine learning algorithms. Implemented advanced threat detection patterns and automated alert mechanisms for rapid incident response.</p>
-                <div class="project-metrics">
-                    <span class="metric">93% Accuracy</span>
-                    <span class="metric">Real-time Detection</span>
-                    <span class="metric">10% Less False Positives</span>
-                    <span class="metric">40% Faster Response</span>
-                </div>
-                <div class="tech-stack">Python, Machine Learning, Threat Intelligence APIs, Real-time Processing</div>
-            </div>
-            
-            <div class="project-card">
-                <h3>Customer Feedback and Retention System</h3>
-                <p>Established a comprehensive feedback platform integrated with customer interaction tools and analytics dashboard. Developed automated data processing workflows to analyze user behavior patterns and improve service delivery.</p>
-                <div class="project-metrics">
-                    <span class="metric">15% Retention Increase</span>
-                    <span class="metric">25% Satisfaction Boost</span>
-                    <span class="metric">10% Better Engagement</span>
-                </div>
-                <div class="tech-stack">SQL, Data Analytics, Customer Support Integration, Dashboard UI</div>
-            </div>
-            
-            <div class="project-card">
-                <h3>Advanced Chrome Screenshot Extension</h3>
-                <p>Built a sophisticated Chrome extension for capturing screenshots of all open tabs with advanced features including selective tab capture, automated URL-based filename generation, and batch processing capabilities.</p>
-                <div class="project-metrics">
-                    <span class="metric">Multi-tab Capture</span>
-                    <span class="metric">Automated Naming</span>
-                    <span class="metric">Enhanced Productivity</span>
-                </div>
-                <div class="tech-stack">JavaScript, Chrome APIs, Bootstrap, Google Material Icons, HTML5</div>
-            </div>
-        </div>
-    </section>
-            
-            <section id="education">
-                <h2>EDUCATION</h2>
-                <div class="experience">
-                    <div class="job-title">Bachelor of Computer Science and Engineering</div>
-                    <div class="company">Venu Institute of Technology, India</div>
-                    <div class="date">GPA: 82.24</div>
-                    <p>Achieved 82% with a focus on software development and security concepts.</p>
-                </div>
-            </section>
-            
             <section id="certifications">
-                <h2>CERTIFICATIONS_&_ACHIEVEMENTS</h2>
-                <div class="certs-achievements">
+                <h2>CERTIFICATIONS</h2>
+                <div class="certs-grid">
                     <div class="cert-item">
-                        <h4>Python Programming</h4>
-                        <p>Code Tantra</p>
+                        <h4>Junior Security Analyst</h4>
+                        <p>TryHackMe</p>
                     </div>
-                    
+                    <div class="cert-item">
+                        <h4>DMCA Copyright: Remove Online Pirated Copies of Your Work</h4>
+                        <p>Udemy</p>
+                    </div>
                     <div class="cert-item">
                         <h4>Networking Basics</h4>
                         <p>Udemy</p>
                     </div>
-                    
                     <div class="cert-item">
-                        <h4>Cybersecurity Essentials</h4>
-                        <p>Cisco</p>
+                        <h4>Python Programming</h4>
+                        <p>CodeTantra</p>
                     </div>
-                    
-                    <div class="achievement-item">
-                        <h4>Python Programming (Top Coder)</h4>
-                        <p>Code Tantra Tech Solution</p>
+                    <div class="cert-item">
+                        <h4>IP Compliance Training for Analysts</h4>
+                        <p>Corsearch</p>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Using Investigative Tools for Website/Domain Research</h4>
+                        <p>Corsearch</p>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Identifying Responsible Entities in Website & Domain Infringements</h4>
+                        <p>Corsearch</p>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Online Marketplace Fundamentals</h4>
+                        <p>Corsearch</p>
                     </div>
                 </div>
             </section>
         </main>
         
         <footer>
-            <p>© <span id="current-year"></span> THANGARAJU AVINASH | CYBERSECURITY SPECIALIST</p>
-            <div class="footer-hacker-text">System secure: <span class="hacker-text">TRUE</span> | Firewall status: <span class="hacker-text">ACTIVE</span> | Last updated: <span id="current-date"></span></div>
+            <p>© <span id="current-year"></span> THANGARAJU AVINASH | BRAND PROTECTION | RESEARCH ANALYST | INFORMATION SECURITY</p>
+            <div class="footer-hacker-text">System secure: <span class="hacker-text">TRUE</span> | Enforcement status: <span class="hacker-text">ACTIVE</span> | Last updated: <span id="current-date"></span></div>
         </footer>
     </div>
     
     <script>
-        // Set current date and year
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', options);
         document.getElementById('current-year').textContent = new Date().getFullYear();
         
-        // Simple typing effect for command line
         const commandText = "whoami --detailed";
         const typingElement = document.querySelector('.typing-effect');
         let i = 0;
@@ -972,7 +896,6 @@
             }
         }
         
-        // Start typing effect after a delay
         setTimeout(typeWriter, 1500);
     </script>
 </body>
